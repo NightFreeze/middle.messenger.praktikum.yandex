@@ -1,0 +1,9 @@
+@import "normalize.css";
+@import "variables";
+@import "mixins";
+
+@import url('https://fonts.googleapis.com/css?family=Inter');
+
+html, body {
+    font-family: 'Inter', Arial, sans-serif;
+}

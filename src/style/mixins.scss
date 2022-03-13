@@ -1,0 +1,59 @@
+@mixin header() {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 40px;
+}
+
+@mixin text-large() {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+@mixin text-medium() {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 13px;
+}
+
+@mixin sub-text-small() {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 9px;
+  line-height: 9px;
+  color: var(--secondary-grey);
+}
+
+@mixin sub-text-medium() {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 12px;
+  color: var(--secondary-grey);
+}
+
+@mixin sub-text-medium-chat() {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: var(--secondary-grey);
+}
+
+@mixin sub-text-large() {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 13px;
+  color: var(--secondary-grey);
+}
