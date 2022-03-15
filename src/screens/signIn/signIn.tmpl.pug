@@ -1,0 +1,19 @@
+extends ../../layouts/centered/centeredLayout.tmpl.pug
+include ./../../components/atoms/input/input.tmpl.pug
+include ./../../components/atoms/button/button.tmpl.pug
+include ./../../components/atoms/linkButton/linkButton.tmpl.pug
+include ./../../components/atoms/header/header.tmpl.pug
+
+block content
+    include  ./../../components/atoms/tile/tile.tmpl.pug
+        block tile_content
+
+            .header-wrapper
+                +renderHeader("Вход")
+            .login-wrapper
+                +renderInput("Логин", "text", "login")
+            .password-wrapper
+                +renderInput("Пароль", "password", "password")
+            .auth-button-wrapper
+                +rednerButton("submit", "Авторизоваться")
+            +linkButton("Нет аккаунта?")

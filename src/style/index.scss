@@ -4,6 +4,23 @@
 
 @import url('https://fonts.googleapis.com/css?family=Inter');
 
+/** layout styles */
+@import "../layouts/centered/centeredLayout.style";
+
+/** components styles */
+/** ----------------- */
+/** atoms styles */
+@import "../components/atoms/tile/tile.style";
+@import "../components/atoms/header/header.style";
+@import "../components/atoms/button/button.style";
+@import "../components/atoms/linkButton/linkButton.style";
+@import "../components/atoms/input/input.style";
+
+/** screens styles */
+@import "../screens/signIn/signIn.style";
+@import "../screens/signUp/signUp.style";
+
 html, body {
     font-family: 'Inter', Arial, sans-serif;
+    color: #1E1E1E;;
 }

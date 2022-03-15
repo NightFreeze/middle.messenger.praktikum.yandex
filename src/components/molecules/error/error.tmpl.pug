@@ -1,0 +1,6 @@
+include ../../atoms/linkButton/linkButton.tmpl.pug
+
+mixin renderError(errorCode, text)
+    h1= errorCode
+    h2= text
+    +linkButton("назад к чатам")

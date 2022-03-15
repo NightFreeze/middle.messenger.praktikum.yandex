@@ -1,0 +1,62 @@
+$width: 263px;
+$trans-time: 300ms;
+
+input[type="password"] {
+  letter-spacing: 0.3em;
+}
+
+input {
+  background: none;
+  color: var(--primary-black);
+  font-size: 13px;
+  padding: 7px 7px 7px 0;
+  display: block;
+  width: $width;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid var(--primary-blue);
+  &:focus {
+    outline: none;
+  }
+  &:focus ~ label,
+  &:valid ~ label {
+    top: -17px;
+    left: 0;
+    font-size: 12px;
+    color: var(--primary-blue);
+  }
+  &:focus ~ .bar:before {
+    width: $width;
+  }
+}
+
+label {
+  color: var(--secondary-grey);
+  font-size: 13px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 0;
+  top: 10px;
+  transition: $trans-time ease all;
+}
+
+.bar {
+  position: relative;
+  display: block;
+  width: $width;
+  &:before {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    position: absolute;
+    background: var(--primary-blue);
+    transition: $trans-time ease all;
+    left: 0;
+  }
+}
+
+.input-container {
+  position: relative;
+}

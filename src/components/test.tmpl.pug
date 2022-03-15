@@ -1,1 +1,5 @@
-p Hello #{name} someone
+include ./atoms/input/input.tmpl.pug
+
+//p Hello #{name} someone
++renderInput("логин", "text")
++renderInput("пароль", "password")

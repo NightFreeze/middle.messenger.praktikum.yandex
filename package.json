@@ -6,7 +6,7 @@
   "author": "Даньшина Анна",
   "license": "MIT",
   "scripts": {
-    "dev": "parcel serve static/index.pug"
+    "dev": "parcel serve static/index.pug --open"
   },
   "devDependencies": {
     "@parcel/config-default": "^2.3.2",

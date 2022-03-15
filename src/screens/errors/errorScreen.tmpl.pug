@@ -1,0 +1,7 @@
+extends ../../layouts/centered/centeredLayout.tmpl.pug
+include ./../../components/molecules/error/error.tmpl.pug
+
+
+block content
+        block tile_content
+            +renderError(errorCode, errorText)
