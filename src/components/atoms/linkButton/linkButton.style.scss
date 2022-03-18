@@ -4,4 +4,8 @@
   line-height: 11px;
   cursor: pointer;
   color: var(--primary-blue);
+
+  &.danger {
+    color: var(--primary-red);
+  }
 }

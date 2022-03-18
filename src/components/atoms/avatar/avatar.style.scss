@@ -1,0 +1,25 @@
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+
+  background: var(--primary-grey);
+
+  //&.size-l {
+    width: 130px;
+    height: 130px;
+  //}
+}
+
+.avatar-veil {
+  display: none;
+}
+
+.avatar:hover + .avatar-veil {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-black);
+  opacity: .5;
+}

@@ -1,0 +1,7 @@
+extends ../../layouts/centered/centeredLayout.tmpl.pug
+
+block content
+    h1 Список страниц приложения
+    ul
+        each page in pages
+            li(onclick=`(${page.handleClick})()`)= page.title

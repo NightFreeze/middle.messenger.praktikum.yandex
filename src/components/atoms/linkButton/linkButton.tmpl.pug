@@ -1,4 +1,4 @@
-mixin linkButton(title, func)
+mixin linkButton(title, func, danger)
     a(
-        class="link-button"
+        class=`link-button ${danger && 'danger'}`
     )= title || ""

@@ -6,6 +6,7 @@
   "author": "Даньшина Анна",
   "license": "MIT",
   "scripts": {
+    "start": "yarn node server.js",
     "dev": "parcel serve static/index.pug --open"
   },
   "devDependencies": {
@@ -15,6 +16,7 @@
     "@parcel/transformer-sass": "^2.3.2",
     "assert": "^2.0.0",
     "buffer": "^6.0.3",
+    "express": "^4.17.3",
     "os-browserify": "^0.3.0",
     "parcel": "^2.3.2",
     "parcel-transformer-pug-precompile": "^1.0.6",
