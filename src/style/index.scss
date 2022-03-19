@@ -28,3 +28,15 @@ html, body {
     font-family: 'Inter', Arial, sans-serif;
     color: #1E1E1E;;
 }
+
+.screen-list-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    // TODO: delete margin later
+    margin: auto;
+}
+
+.screen-list__nav-container {
+    margin:auto;
+}

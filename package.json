@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "start": "yarn node server.js",
-    "dev": "parcel serve static/index.pug --open"
+    "dev": "rm -r dist .parcel-cache; parcel ./src/**/index.pug -p 3000 --open"
   },
   "devDependencies": {
     "@parcel/config-default": "^2.3.2",

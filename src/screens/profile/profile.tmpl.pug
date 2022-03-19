@@ -5,11 +5,12 @@ include ./../../components/atoms/profileInfo/profileInfo.tmpl.pug
     include ./../../components/atoms/linkButton/linkButton.tmpl.pug
 
 block content
-    .profile-header-wrapper
-        +renderAvatar('j', 'k')
+    .profile__header-wrapper
+        .profile__heading-wrapper
+            +renderAvatar('j', handleAvatarCLick)
         +renderHeader("Иван")
     .profile-info-wrapper
-        +renderProfileInfo('Почта', 'pochta@yandex.ru')
+        +renderProfileInfo('Почта', email)
         +renderProfileInfo('Логин', 'ivanivanov')
         +renderProfileInfo('Имя', 'Иван')
         +renderProfileInfo('Фамилия', 'Иванов')
