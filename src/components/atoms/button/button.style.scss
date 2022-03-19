@@ -7,7 +7,7 @@
   padding: 12px;
   width: 100%;
 
-  @include text-medium();
+  @include text-m();
   color: var(--primary-white);
   background: var(--primary-blue);
   border-radius: var(--8);

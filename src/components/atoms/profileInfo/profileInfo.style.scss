@@ -5,15 +5,20 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 10px 0;
 
   border-bottom: 1px solid var(--primary-grey);
+
+  &:last-of-type {
+    border-bottom: none;
+  }
 }
 
 .profile-info__title {
-  @include text-medium();
+  @include text-s();
 }
 
 .profile-info__info {
-  @include text-medium();
+  @include text-s();
   color: var(--secondary-grey)
 }

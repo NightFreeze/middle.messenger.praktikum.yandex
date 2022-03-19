@@ -1,30 +1,36 @@
+@import "../../style/mixins";
+
 .profile__header-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 60px;
 }
 
 .profile__heading-wrapper {
   margin-bottom: 21px;
 }
 
-.profile-info-wrapper {
+.profile__heading {
+  @include text-xl();
+}
+
+.profile__info-wrapper {
   display: flex;
   flex-direction: column;
   width: 510px;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
 }
 
-.profile-footer-wrapper {
+.profile__footer-wrapper {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-.profile-control-wrapper {
+.profile__control-wrapper {
   border-bottom: 1px solid var(--primary-grey);
-  padding: 15px 0;
+  padding: 10px 0;
 
   &:last-of-type {
     border-bottom: none;

@@ -2,18 +2,18 @@ extends ../../layouts/centered/centeredLayout.tmpl.pug
 include ./../../components/atoms/input/input.tmpl.pug
 include ./../../components/atoms/button/button.tmpl.pug
 include ./../../components/atoms/linkButton/linkButton.tmpl.pug
-include ./../../components/atoms/header/header.tmpl.pug
 
 block content
     include  ./../../components/atoms/tile/tile.tmpl.pug
         block tile_content
-
-            .header-wrapper
-                +renderHeader("Вход")
-            .login-wrapper
-                +renderInput("Логин", "text", "login")
-            .password-wrapper
-                +renderInput("Пароль", "password", "password")
-            .auth-button-wrapper
-                +rednerButton("submit", "Авторизоваться")
-            +linkButton("Нет аккаунта?")
+            form(action="" type="submit").login__form-wrapper
+                .login__header-wrapper
+                    h1.login__header Вход
+                .login__login-wrapper
+                    +renderInput("Логин", "text", "login")
+                .login__password-wrapper
+                    +renderInput("Пароль", "password", "password")
+                .login__auth-button-wrapper
+                    +rednerButton("submit", "Авторизоваться")
+                .login__register-button
+                    +linkButton("Нет аккаунта?")

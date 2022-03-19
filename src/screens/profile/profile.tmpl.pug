@@ -1,25 +1,24 @@
 extends ../../layouts/centered/centeredLayout.tmpl.pug
 include ./../../components/atoms/avatar/avatar.tmpl.pug
-include ./../../components/atoms/header/header.tmpl.pug
 include ./../../components/atoms/profileInfo/profileInfo.tmpl.pug
     include ./../../components/atoms/linkButton/linkButton.tmpl.pug
 
 block content
     .profile__header-wrapper
         .profile__heading-wrapper
-            +renderAvatar('j', handleAvatarCLick)
-        +renderHeader("Иван")
-    .profile-info-wrapper
+            +renderAvatar('j')
+        h1.profile__heading= name
+    .profile__info-wrapper
         +renderProfileInfo('Почта', email)
-        +renderProfileInfo('Логин', 'ivanivanov')
-        +renderProfileInfo('Имя', 'Иван')
-        +renderProfileInfo('Фамилия', 'Иванов')
-        +renderProfileInfo('Имя в чате', 'Иван')
-        +renderProfileInfo('Телефон', '+7 (909) 967 30 30')
-    .profile-footer-wrapper
-        .profile-control-wrapper
+        +renderProfileInfo('Логин', login)
+        +renderProfileInfo('Имя', name)
+        +renderProfileInfo('Фамилия', surname)
+        +renderProfileInfo('Имя в чате', nickname)
+        +renderProfileInfo('Телефон', phone)
+    .profile__footer-wrapper
+        .profile__control-wrapper
             +linkButton('Изменить данные')
-        .profile-control-wrapper
+        .profile__control-wrapper
             +linkButton('Изменить пароль')
-        .profile-control-wrapper
-            +linkButton('Выйти', '', true)
+        .profile__control-wrapper
+            +linkButton('Выйти', 'l', true)

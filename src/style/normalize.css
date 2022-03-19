@@ -37,7 +37,7 @@ main {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 
-h1, p {
+h1, h2, p {
     margin-block-start: 0;
     margin-block-end: 0;
 }

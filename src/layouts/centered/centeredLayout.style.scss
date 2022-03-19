@@ -1,11 +1,9 @@
-.wrapper {
+.main {
   display: flex;
   width: 100vw;
   height: 100vh;
-  // TODO: delete margin later
-  margin: auto;
 }
 
-.container {
+.main__content-wrapper {
   margin: auto;
 }

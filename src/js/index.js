@@ -1,6 +1,6 @@
 import signIn from '../screens/signIn/signIn.tmpl.pug';
 import signUp from '../screens/signUp/signUp.tmpl.pug';
-import errorPage from '../screens/errors/errorScreen.tmpl.pug';
+import errorPage from '../screens/error404/errorScreen.tmpl.pug';
 import chat from '../screens/chat/chat.tmpl.pug';
 import profile from '../screens/profile/profile.tmpl.pug';
 import screenMock from '../screens/screenMock/screenMock.tmpl.pug';

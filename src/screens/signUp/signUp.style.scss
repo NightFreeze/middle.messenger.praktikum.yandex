@@ -1,16 +1,34 @@
-.header-wrapper {
+@import "../../style/mixins";
+
+.signup__form-wrapper{
+  display: flex;
+  flex-direction: column;
+}
+
+.signup__header-wrapper {
+  display: flex;
+  justify-content: center;
   margin-bottom: 32px;
 }
 
-.login-wrapper {
+.signup__header {
+  @include text-xl();
+}
+
+.signup__input-wrapper {
   margin-bottom: 20px;
 }
 
-.password-wrapper {
-  margin-bottom: 169px;
+.signup__input-wrapper--last {
+  margin-bottom: 62px;
 }
 
-.auth-button-wrapper {
+.signup__signup-button-wrapper {
   width: 100%;
   margin-bottom: 14px;
+}
+
+.signup__signin-button-wrapper {
+  display: flex;
+  justify-content: center;
 }

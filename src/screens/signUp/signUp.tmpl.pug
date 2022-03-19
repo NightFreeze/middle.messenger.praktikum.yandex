@@ -2,28 +2,30 @@ extends ../../layouts/centered/centeredLayout.tmpl.pug
 include ./../../components/atoms/input/input.tmpl.pug
 include ./../../components/atoms/button/button.tmpl.pug
 include ./../../components/atoms/linkButton/linkButton.tmpl.pug
-include ./../../components/atoms/header/header.tmpl.pug
 
 block content
     include  ./../../components/atoms/tile/tile.tmpl.pug
         block tile_content
+            form(action="" type="submit").signup__form-wrapper
+                .signup__header-wrapper
+                    h1.signup__header Регистрация
 
-            .header-wrapper
-                +renderHeader("Регистрация")
-            .login-wrapper
-                +renderInput("Почта", "text", "login")
-            .login-wrapper
-                +renderInput("Логин", "text", "login")
-            .login-wrapper
-                +renderInput("Имя", "text", "login")
-            .login-wrapper
-                +renderInput("Фамилия", "text", "login")
-            .login-wrapper
-                +renderInput("Телефон", "phone", "login")
-            .login-wrapper
-                +renderInput("Пароль", "password", "password")
-            .password-wrapper
-                +renderInput("Пароль (ещё раз)", "password", "password")
-            .auth-button-wrapper
-                +rednerButton("submit", "Зарегистрироваться")
-            +linkButton("Войти")
+                .signup__input-wrapper
+                    +renderInput("Почта", "text", "login")
+                .signup__input-wrapper
+                    +renderInput("Логин", "text", "login")
+                .signup__input-wrapper
+                    +renderInput("Имя", "text", "login")
+                .signup__input-wrapper
+                    +renderInput("Фамилия", "text", "login")
+                .signup__input-wrapper
+                    +renderInput("Телефон", "phone", "login")
+                .signup__input-wrapper
+                    +renderInput("Пароль", "password", "password")
+                .signup__input-wrapper--last
+                    +renderInput("Пароль (ещё раз)", "password", "password")
+
+                .signup__signup-button-wrapper
+                    +rednerButton("submit", "Зарегистрироваться")
+                .signup__signin-button-wrapper
+                    +linkButton("Войти")

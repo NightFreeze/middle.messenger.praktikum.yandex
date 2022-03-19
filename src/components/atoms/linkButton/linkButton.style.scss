@@ -1,9 +1,13 @@
+@import "../../../style/mixins";
+
 .link-button {
-  font-weight: 500;
-  font-size: 11px;
-  line-height: 11px;
+  @include text-xxs();
   cursor: pointer;
   color: var(--primary-blue);
+
+  &.size-l {
+    @include text-s();
+  }
 
   &.danger {
     color: var(--primary-red);
