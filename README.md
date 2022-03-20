@@ -2,6 +2,10 @@
 
 Учебный проект веб-приложение «Чат»
 
+## Проект на хостинге
+
+[Веб-приложение Чат](https://nostalgic-lewin-d794ba.netlify.app)
+
 ## Макет
 
 Макет проекта хранится в [Фигме](https://www.figma.com/file/24EUnEHGEDNLdOcxg7ULwV/Chat?node-id=0%3A1)
