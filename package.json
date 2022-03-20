@@ -1,28 +1,28 @@
 {
   "name": "messenger",
   "version": "1.0.0",
-  "main": "index.js",
   "repository": "https://github.com/NightFreeze/middle.messenger.praktikum.yandex.git",
   "author": "Даньшина Анна",
   "license": "MIT",
   "scripts": {
-    "start": "yarn node server.js",
-    "dev": "rm -r dist .parcel-cache; parcel ./src/**/index.pug -p 3000 --open"
+    "start": "node server.js",
+    "dev": "rm -r dist .parcel-cache; parcel ./src/**/index.pug -p 3000 --open",
+    "build": "parcel build ./src/**/index.pug"
   },
   "devDependencies": {
-    "@parcel/config-default": "^2.3.2",
-    "@parcel/transformer-inline-string": "^2.3.2",
+    "@parcel/config-default": "2.3.2",
+    "@parcel/transformer-inline-string": "2.3.2",
     "@parcel/transformer-pug": "2.3.2",
-    "@parcel/transformer-sass": "^2.3.2",
-    "assert": "^2.0.0",
-    "buffer": "^6.0.3",
-    "express": "^4.17.3",
-    "os-browserify": "^0.3.0",
-    "parcel": "^2.3.2",
-    "parcel-transformer-pug-precompile": "^1.0.6",
-    "path-browserify": "^1.0.1",
-    "process": "^0.11.10",
-    "pug": "^3.0.2"
+    "@parcel/transformer-sass": "2.3.2",
+    "assert": "2.0.0",
+    "buffer": "6.0.3",
+    "express": "4.17.3",
+    "os-browserify": "0.3.0",
+    "parcel": "2.3.2",
+    "parcel-transformer-pug-precompile": "1.0.6",
+    "path-browserify": "1.0.1",
+    "process": "0.11.10",
+    "pug": "3.0.2"
   },
   "dependencies": {
     "normalize.css": "^8.0.1",
