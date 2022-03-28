@@ -1,0 +1,15 @@
+@import "../../../style/mixins";
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  width: 100%;
+
+  @include text-m();
+  color: var(--primary-white);
+  background: var(--primary-blue);
+  border-radius: var(--8);
+  cursor: pointer;
+}

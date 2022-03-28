@@ -1,0 +1,9 @@
+mixin renderAvatar(size, url)
+    .avatar
+        if url
+            img.avatar__image(src= url alt="Avatar")
+        else
+            include ../../../assets/profile.svg
+        .avatar__veil
+            .avatar__text Поменять аватар
+

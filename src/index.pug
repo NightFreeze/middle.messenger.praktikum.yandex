@@ -1,0 +1,29 @@
+include components/atoms/head/head.tmpl.pug
+
+doctype html
+html
+    +renderHead('SCREEN LIST')
+    body
+        include layouts/centered/centeredLayout.tmpl.pug
+            block content
+                .index__header-wrapper
+                    h1.index__header Список экранов приложения:
+                .index__nav-list-container
+                    .index__nav-element-container
+                        a(href='./screens/signIn')
+                            p.index__page-title Авторизация
+                    .index__nav-element-container
+                        a(href='./screens/signUp')
+                            p.index__page-title Регистрация
+                    .index__nav-element-container
+                        a(href='./screens/error404')
+                            p.index__page-title Ошибка 404
+                    .index__nav-element-container
+                        a(href='./screens/error500')
+                            p.index__page-title Ошибка 500
+                    .index__nav-element-container
+                        a(href='./screens/profile')
+                            p.index__page-title Профиль
+                    .index__nav-element-container
+                        a(href='./screens/chat')
+                            p.index__page-title Чат (заглушка)

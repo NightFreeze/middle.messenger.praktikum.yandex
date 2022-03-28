@@ -1,0 +1,23 @@
+@import "../../../style/mixins";
+
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.error__title-wrapper {
+  margin-bottom: 20px;
+}
+
+.error__title {
+  @include text-xxl();
+}
+
+.error__sub-title-wrapper {
+  margin-bottom: 69px;
+}
+
+.error__sub-title {
+  @include text-xl();
+}

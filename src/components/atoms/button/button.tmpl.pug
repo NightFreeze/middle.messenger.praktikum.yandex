@@ -1,0 +1,5 @@
+mixin rednerButton(type, text, customClass)
+    button(
+        type=type || "submit"
+        class=`button ${customClass || ''}`
+    )= text || "Text button"
