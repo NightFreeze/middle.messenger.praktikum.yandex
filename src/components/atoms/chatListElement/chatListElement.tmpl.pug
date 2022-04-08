@@ -1,0 +1,16 @@
+include ../avatarInChat/avatarInChat.tmpl.pug
+
+mixin renderChatListElement(userInfo)
+  .chat-list-element
+    .chat-list-element__info-content
+      .chat-list-element__avatar-container
+        +renderChatAvatar('m', userInfo.photoUrl)
+      .chat-list-element__text-container
+        .chat-list-element__user-name= userInfo.nickname
+        .chat-list-element__message-info= userInfo.message
+
+    .chat-list-element__meta-content
+      .chat-list-element__time= userInfo.time
+
+      if userInfo.counter
+          .chat-list-element__message-counter= userInfo.counter

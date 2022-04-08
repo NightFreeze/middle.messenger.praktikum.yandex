@@ -1,0 +1,59 @@
+@import "../../../style/mixins";
+
+.chat-list-element {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  cursor: pointer;
+}
+
+.chat-list-element__info-content {
+  display: flex;
+}
+
+.chat-list-element__avatar-container {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.chat-list-element__text-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-list-element__user-name {
+  @include text-s-bold();
+  margin-bottom: 5px;
+}
+
+.chat-list-element__message-info {
+  @include text-s();
+  color: var(--secondary-grey);
+}
+
+.chat-list-element__meta-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-list-element__time {
+  @include text-xxxs();
+  color: var(--secondary-grey);
+  margin-bottom: 18px;
+}
+
+.chat-list-element__message-counter {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-blue);
+  color: var(--primary-white);
+  @include text-xxs-bold();
+}
+
+

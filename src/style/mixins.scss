@@ -54,6 +54,13 @@
   line-height: 12px;
 }
 
+@mixin text-xxs-bold() {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 11px;
+}
+
 @mixin text-xxs() {
   font-style: normal;
   font-weight: 500;

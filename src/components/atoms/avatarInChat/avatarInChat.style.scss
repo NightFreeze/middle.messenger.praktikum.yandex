@@ -1,0 +1,19 @@
+.chat-avatar {
+  width: 47px;
+  height: 47px;
+  border-radius: 50%;
+
+  background: var(--primary-grey);
+
+  &.chat-avatar--small {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+.chat-avatar__image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 50%;
+}
