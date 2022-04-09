@@ -17,5 +17,5 @@
 - `npm run dev` — запуск версии для разработчика
 - `npm run build` — сборка стабильной версии.
 
-## Ссылка на пр первого стринта sprint 1
-[Ссылка на пр](https://github.com/NightFreeze/middle.messenger.praktikum.yandex/pull/1)
+## Ссылка на пр второго стринта sprint 2
+[Ссылка на пр](https://github.com/NightFreeze/middle.messenger.praktikum.yandex/pull/2)
