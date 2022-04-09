@@ -11,7 +11,7 @@ export default class Block<T extends object = {}> {
 
   private _element: HTMLElement | null = null;
 
-  private readonly _meta: { tagName: string } = { tagName: 'div' };
+  private _meta: { tagName: string } = { tagName: 'div' };
 
   private _events: Record<string, (e: Event) => void> = {};
 
@@ -111,8 +111,8 @@ export default class Block<T extends object = {}> {
     }
   }
 
+  // eslint-disable-next-line
   // @ts-ignore
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   public componentDidUpdate(oldProps: T, newProps: T) {
     return true;
   }

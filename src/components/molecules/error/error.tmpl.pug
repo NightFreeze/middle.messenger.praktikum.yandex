@@ -1,9 +1,0 @@
-include ../../atoms/linkButton/linkButton.tmpl.pug
-
-mixin renderError(errorCode, text)
-    .error
-        .error__title-wrapper
-            h1.error__title= errorCode
-        .error__sub-title-wrapper
-            h2.error__sub-title= text
-        +linkButton("назад к чатам")

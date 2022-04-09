@@ -1,14 +1,10 @@
-import Block from './block';
+import { Block } from './block';
 
-export default function (query: string, block: Block) {
-  const root = document.querySelector(query);
-
-  if (root) {
-    // @ts-ignore
+export const render = function (query: string, block: Block) {
+    const root = document.querySelector(query);
     root.appendChild(block.getContent());
-  }
 
-  block.dispatchComponentDidMount();
+    block.dispatchComponentDidMount();
 
-  return root;
+    return root;
 }

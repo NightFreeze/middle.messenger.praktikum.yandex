@@ -1,9 +1,0 @@
-mixin linkButton(title, size, danger)
-    if size === 'l'
-        a(
-            class=`link-button size-l ${danger && 'danger'}`
-        )= title || ""
-    else
-        a(
-            class=`link-button ${danger && 'danger'}`
-        )= title || ""
