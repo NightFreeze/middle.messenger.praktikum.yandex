@@ -4,14 +4,17 @@
   flex-direction: column;
   justify-content: end;
 }
+
 .messages-list__item {
   width: 100%;
   margin-bottom: 10px;
 }
+
 .message__content-wrapper {
   position: relative;
   display: inline-block;
 }
+
 .message__time {
   position: absolute;
   right: 11px;
@@ -24,12 +27,15 @@
   color: var(--secondary-grey);
   text-align: right;
 }
+
 .message {
   text-align: left;
 }
+
 .message_date {
   text-align: center;
 }
+
 .message.message_date .message__content {
   text-align: center;
   font-family: Inter;
@@ -39,6 +45,7 @@
   line-height: 12px;
   color: var(--secondary-grey);
 }
+
 .message.message_text .message__content {
   padding: 11px;
   background-color: var(--primary-grey);
@@ -49,19 +56,18 @@
   line-height: 15px;
   color: var(--primary-black);
   border-radius: 12px;
-
-  p {
-    margin-bottom: 10px;
-  }
 }
+
 .message.message_img .message__content {
   border: 1px solid #EAEAEA;
   border-radius: 12px;
   overflow: hidden;
 }
+
 .message_me {
   text-align: right;
 }
+
 .message.message_me .message__content {
   font-family: Inter;
   font-style: normal;

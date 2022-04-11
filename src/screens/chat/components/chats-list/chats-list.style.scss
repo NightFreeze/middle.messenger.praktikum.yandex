@@ -6,9 +6,11 @@
     border-top: 1px solid var(--primary-grey);
   }
 }
+
 .chat-item_flex {
   display: flex;
 }
+
 .chat-item__avatar {
   flex-shrink: 0;
   width: 47px;
@@ -17,9 +19,11 @@
   background-color: var(--primary-grey);
   margin-right: 10px;
 }
+
 .chat-item-info.chat-item__info {
   width: 100%;
 }
+
 .chat-item-info__name {
   margin-bottom: 4px;
   font-family: Inter;
@@ -29,6 +33,7 @@
   line-height: 13px;
   color: var(--primary-black)
 }
+
 .chat-item-info__message {
   font-family: Inter;
   font-style: normal;
@@ -37,6 +42,7 @@
   line-height: 15px;
   color: var(--secondary-grey);
 }
+
 .chat-item-info__message_me {
   margin-right: 4px;
   font-family: Inter;
@@ -45,6 +51,7 @@
   font-size: 13px;
   color: var(--primary-black);
 }
+
 .chat-item-data__time {
   font-family: Inter;
   font-style: normal;
@@ -53,6 +60,7 @@
   line-height: 13px;
   color: var(--secondary-grey);
 }
+
 .chat-item-data__count {
   display: flex;
   align-items: center;

@@ -64,6 +64,7 @@
   display: flex;
   align-items: center;
 }
+
 .chat-profile__avatar {
   width: 47px;
   height: 47px;
@@ -71,6 +72,7 @@
   border-radius: 50%;
   margin-right: 10px;
 }
+
 .chat-profile__name {
   font-family: Inter;
   font-style: normal;
@@ -79,6 +81,7 @@
   line-height: 13px;
   color: var(--primary-black);
 }
+
 .chat-menu {
   display: flex;
   align-items: center;
@@ -90,6 +93,7 @@
   padding: 11px 0;
   border-top: 1px solid var(--secondary-grey);
 }
+
 .message-form__input {
   width: 100%;
   margin: 0 10px;
