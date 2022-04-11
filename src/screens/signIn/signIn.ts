@@ -9,7 +9,7 @@ import loginTemplate from './signIn.tmpl.pug';
 import ValidatedInput from '~src/components/atoms/input-validator/input-validator';
 import Input from '~src/components/atoms/input/input';
 import Button from '~src/components/atoms/button/button';
-import { VALIDATION_NAMES } from '~src/utils/validator';
+import { ValidationNames } from '~src/utils/validator';
 
 interface ILoginProps {
   loginField: Input;
@@ -24,7 +24,7 @@ export default class SignIn extends Block<ILoginProps> {
   protected getChildren(): Record<string, Block> {
     const loginField = new ValidatedInput({
       isValid: false,
-      validationName: VALIDATION_NAMES.LOGIN,
+      validationName: ValidationNames.LOGIN,
       placeholder: 'Логин',
       name: 'login',
       type: 'text',
@@ -33,7 +33,7 @@ export default class SignIn extends Block<ILoginProps> {
 
     const passwordField = new ValidatedInput({
       isValid: false,
-      validationName: VALIDATION_NAMES.PASSWORD,
+      validationName: ValidationNames.PASSWORD,
       placeholder: 'Пароль',
       name: 'password',
       type: 'password',

@@ -1,11 +1,11 @@
 import Block from '~src/utils/block';
-import { validate, VALIDATION_NAMES } from '~src/utils/validator';
+import { validate, ValidationNames } from '~src/utils/validator';
 import Input, { IInputProps } from '../input/input';
 import inputValidatorTemplate from './input-validator.tmpl.pug';
 
 interface IValidatedInputProps extends IInputProps {
   isValid: boolean;
-  validationName: VALIDATION_NAMES;
+  validationName: ValidationNames;
   validationMessage?: string;
   withoutValidationMessage?: boolean;
 }

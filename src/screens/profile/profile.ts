@@ -8,7 +8,7 @@ import '~src/components/atoms/button/button.style.scss';
 import registrationTemplate from './profile.pug';
 import ValidatedInput from '~src/components/atoms/input-validator/input-validator';
 import Button from '~src/components/atoms/button/button';
-import { VALIDATION_NAMES } from '~src/utils/validator';
+import { ValidationNames } from '~src/utils/validator';
 
 export default class Profile extends Block {
   constructor() {
@@ -18,7 +18,7 @@ export default class Profile extends Block {
   protected getChildren(): Record<string, Block> {
     const emailField = new ValidatedInput({
       isValid: false,
-      validationName: VALIDATION_NAMES.EMAIL,
+      validationName: ValidationNames.EMAIL,
       placeholder: 'Почта',
       name: 'email',
       type: 'email',
@@ -27,7 +27,7 @@ export default class Profile extends Block {
 
     const loginField = new ValidatedInput({
       isValid: false,
-      validationName: VALIDATION_NAMES.LOGIN,
+      validationName: ValidationNames.LOGIN,
       placeholder: 'Логин',
       name: 'login',
       type: 'text',
@@ -36,7 +36,7 @@ export default class Profile extends Block {
 
     const firstNameField = new ValidatedInput({
       isValid: false,
-      validationName: VALIDATION_NAMES.NAME,
+      validationName: ValidationNames.NAME,
       placeholder: 'Имя',
       name: 'first_name',
       type: 'text',
@@ -45,7 +45,7 @@ export default class Profile extends Block {
 
     const secondNameField = new ValidatedInput({
       isValid: false,
-      validationName: VALIDATION_NAMES.NAME,
+      validationName: ValidationNames.NAME,
       placeholder: 'Фамилия',
       name: 'second_name',
       type: 'text',
@@ -54,7 +54,7 @@ export default class Profile extends Block {
 
     const phoneField = new ValidatedInput({
       isValid: false,
-      validationName: VALIDATION_NAMES.PHONE,
+      validationName: ValidationNames.PHONE,
       placeholder: 'Телефон',
       name: 'phone',
       type: 'tel',
@@ -63,7 +63,7 @@ export default class Profile extends Block {
 
     const oldPasswordField = new ValidatedInput({
       isValid: false,
-      validationName: VALIDATION_NAMES.PASSWORD,
+      validationName: ValidationNames.PASSWORD,
       placeholder: 'Пароль',
       name: 'oldPassword',
       type: 'password',
@@ -72,7 +72,7 @@ export default class Profile extends Block {
 
     const newPasswordField = new ValidatedInput({
       isValid: false,
-      validationName: VALIDATION_NAMES.PASSWORD,
+      validationName: ValidationNames.PASSWORD,
       placeholder: 'Пароль',
       name: 'newPassword',
       type: 'password',

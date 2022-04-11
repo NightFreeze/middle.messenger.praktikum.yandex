@@ -9,7 +9,7 @@ import registrationTemplate from './signUp.tmpl.pug';
 import ValidatedInput from '~src/components/atoms/input-validator/input-validator';
 import Input from '~src/components/atoms/input/input';
 import Button from '~src/components/atoms/button/button';
-import { VALIDATION_NAMES } from '~src/utils/validator';
+import { ValidationNames } from '~src/utils/validator';
 
 interface ILoginProps {
   loginField: Input;
@@ -24,7 +24,7 @@ export default class SignUp extends Block<ILoginProps> {
   protected getChildren(): Record<string, Block> {
     const emailField = new ValidatedInput({
       isValid: false,
-      validationName: VALIDATION_NAMES.EMAIL,
+      validationName: ValidationNames.EMAIL,
       placeholder: 'Почта',
       name: 'email',
       type: 'email',
@@ -33,7 +33,7 @@ export default class SignUp extends Block<ILoginProps> {
 
     const loginField = new ValidatedInput({
       isValid: false,
-      validationName: VALIDATION_NAMES.LOGIN,
+      validationName: ValidationNames.LOGIN,
       placeholder: 'Логин',
       name: 'login',
       type: 'text',
@@ -42,7 +42,7 @@ export default class SignUp extends Block<ILoginProps> {
 
     const firstNameField = new ValidatedInput({
       isValid: false,
-      validationName: VALIDATION_NAMES.NAME,
+      validationName: ValidationNames.NAME,
       placeholder: 'Имя',
       name: 'first_name',
       type: 'text',
@@ -51,7 +51,7 @@ export default class SignUp extends Block<ILoginProps> {
 
     const secondNameField = new ValidatedInput({
       isValid: false,
-      validationName: VALIDATION_NAMES.NAME,
+      validationName: ValidationNames.NAME,
       placeholder: 'Фамилия',
       name: 'second_name',
       type: 'text',
@@ -60,7 +60,7 @@ export default class SignUp extends Block<ILoginProps> {
 
     const phoneField = new ValidatedInput({
       isValid: false,
-      validationName: VALIDATION_NAMES.PHONE,
+      validationName: ValidationNames.PHONE,
       placeholder: 'Телефон',
       name: 'phone',
       type: 'tel',
@@ -69,7 +69,7 @@ export default class SignUp extends Block<ILoginProps> {
 
     const passwordField = new ValidatedInput({
       isValid: false,
-      validationName: VALIDATION_NAMES.PASSWORD,
+      validationName: ValidationNames.PASSWORD,
       placeholder: 'Пароль',
       name: 'password',
       type: 'password',
