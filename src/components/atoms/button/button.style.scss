@@ -1,7 +1,7 @@
 .button {
   border: none;
   border-radius: 8px;
-  color: var(--white);
+  color: var(--primary-white);
   cursor: pointer;
   font-size: 13px;
   padding: 15px;
@@ -11,10 +11,10 @@
 }
 
 .button.blue {
-  background-color: var(--primary);
+  background-color: var(--primary-blue);
 }
 
 .button.white {
-  background-color: var(--white);
-  color: var(--primary);
+  background-color: var(--primary-white);
+  color: var(--primary-blue);
 }

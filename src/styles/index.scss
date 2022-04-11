@@ -1,3 +1,5 @@
+@import "variables";
+
 html {
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
@@ -35,15 +37,4 @@ body {
 
 #app {
   height: 100%;
-}
-
-:root {
-  --white: #fff;
-  --primary: #3369f3;
-  --text-color-01: #1e1e1e;
-  --text-color-02: #999;
-  --nav-background-color: #fbfbfb;
-  --border-color: #eaeaea;
-  --neutral-background-color: #efefef;
-  --error-color: #ff2f2f;
 }

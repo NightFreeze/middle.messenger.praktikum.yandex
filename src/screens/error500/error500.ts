@@ -1,7 +1,7 @@
 import ErrorBlock from '~src/components/atoms/error-block/error-block';
 import Block from '~src/utils/block';
 import notFoundTemplate from './error500.tmpl.pug';
-import '../index.scss';
+import '../../styles/index.scss';
 import './error500.style.scss';
 import '~src/components/atoms/error-block/error-block.style.scss';
 

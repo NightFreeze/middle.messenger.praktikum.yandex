@@ -21,7 +21,7 @@
   font-weight: 500;
   font-size: 9px;
   line-height: 9px;
-  color: #999999;
+  color: var(--secondary-grey);
   text-align: right;
 }
 .message {
@@ -37,17 +37,17 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 12px;
-  color: #999999;
+  color: var(--secondary-grey);
 }
 .message.message_text .message__content {
   padding: 11px;
-  background-color: #F8F8F8;
+  background-color: var(--primary-grey);
   font-family: Inter;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
   line-height: 15px;
-  color: #1E1E1E;
+  color: var(--primary-black);
   border-radius: 12px;
 
   p {
@@ -63,14 +63,13 @@
   text-align: right;
 }
 .message.message_me .message__content {
-  padding: 11px;
   font-family: Inter;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
   line-height: 15px;
-  color: #1E1E1E;
-  background-color: #E4EDFD;
+  color: var(--primary-black);
+  background-color: var(--primary-grey);
   border-radius: 12px;
-  padding-right: 50px;
+  padding: 11px 50px 11px 11px;
 }

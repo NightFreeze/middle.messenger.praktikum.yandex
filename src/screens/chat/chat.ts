@@ -3,7 +3,7 @@ import ChatsList from './components/chats-list/chats-list';
 import MessageList from './components/messages-list/message-list';
 import chatsTemplate from './chats.tmpl.pug';
 
-import '../index.scss';
+import '../../styles/index.scss';
 import './chats.style.scss';
 import './components/chats-list/chats-list.style.scss';
 import './components/messages-list/messages-list.style.scss';

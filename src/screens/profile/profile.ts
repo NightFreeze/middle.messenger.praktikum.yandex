@@ -1,5 +1,5 @@
 import Block from '~src/utils/block';
-import '../index.scss';
+import '../../styles/index.scss';
 import './profile.style.scss';
 import '~src/components/atoms/form/form.style.scss';
 import '~src/components/atoms/input/input.style.scss';
