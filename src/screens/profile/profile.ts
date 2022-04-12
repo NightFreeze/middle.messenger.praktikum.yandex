@@ -5,7 +5,7 @@ import '~src/components/atoms/form/form.style.scss';
 import '~src/components/atoms/input/input.style.scss';
 import '~src/components/atoms/input-validator/input-validator.style.scss';
 import '~src/components/atoms/button/button.style.scss';
-import registrationTemplate from './profile.pug';
+import registrationTemplate from './profile.tmpl.pug';
 import ValidatedInput from '~src/components/atoms/input-validator/input-validator';
 import Button from '~src/components/atoms/button/button';
 import { ValidationNames } from '~src/utils/validator';
