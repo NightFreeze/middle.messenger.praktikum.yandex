@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node server.ts",
     "dev": "rm -r dist .parcel-cache; parcel ./src/**/index.pug -p 3000 --open",
-    "build": "parcel build ./src/**/index.pug",
+    "build": "parcel build ./src/screens/index.pug",
     "stylelint": "stylelint src/**/*.scss",
     "eslint": "eslint src/**/*.ts"
   },
