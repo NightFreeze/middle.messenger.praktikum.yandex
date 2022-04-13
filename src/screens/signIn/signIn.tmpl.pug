@@ -1,19 +1,14 @@
-extends ../../layouts/centered/centeredLayout.tmpl.pug
-include ./../../components/atoms/input/input.tmpl.pug
-include ./../../components/atoms/button/button.tmpl.pug
-include ./../../components/atoms/linkButton/linkButton.tmpl.pug
-
-block content
-    include  ./../../components/atoms/tile/tile.tmpl.pug
-        block tile_content
-            form(action="" type="submit").login__form-wrapper
-                .login__header-wrapper
-                    h1.login__header Вход
-                .login__login-wrapper
-                    +renderInput("Логин", "text", "login")
-                .login__password-wrapper
-                    +renderInput("Пароль", "password", "password")
-                .login__auth-button-wrapper
-                    +rednerButton("submit", "Авторизоваться")
-                .login__register-button
-                    +linkButton("Нет аккаунта?")
+form.form.login-form(action="/chats")
+    p.form__title Вход
+        if loginField
+            div.form__field
+                != loginField
+        if passwordField
+            div.form__field
+                != passwordField
+        if submitButton
+            div.form__field
+                != submitButton
+        if registrationButton
+            div.form__field
+                != registrationButton

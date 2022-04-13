@@ -1,0 +1,15 @@
+.chats-list
+    each item in chats
+        .chat-item
+            .chat-item_flex
+                .chat-item__avatar
+                .chat-item-info.chat-item__info
+                    p.chat-item-info__name= item.name
+                    p.chat-item-info__message
+                        if item.isMe
+                            span.chat-item-info__message_me Вы:
+                        != item.message
+                .chat-item-data.chat-item__data
+                    p.chat-item-data__time= item.time
+                    if item.count
+                        p.chat-item-data__count: span= item.count

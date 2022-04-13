@@ -1,0 +1,44 @@
+@import "variables";
+
+html {
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  font-family: 'Inter', sans-serif;
+}
+
+ul {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+  list-style: none;
+}
+
+p {
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+}
+
+br {
+  margin-bottom: 10px;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+#app {
+  height: 100%;
+}

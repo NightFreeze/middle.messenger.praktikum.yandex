@@ -1,34 +1,3 @@
-@import "../../style/mixins";
-
-.login__form-wrapper {
-  display: flex;
-  flex-direction: column;
-}
-
-.login__header-wrapper {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 57px;
-}
-
-.login__header {
-  @include text-xl();
-}
-
-.login__login-wrapper {
-  margin-bottom: 20px;
-}
-
-.login__password-wrapper {
-  margin-bottom: 169px;
-}
-
-.login__auth-button-wrapper {
-  width: 100%;
-  margin-bottom: 14px;
-}
-
-.login__register-button {
-  display: flex;
-  justify-content: center;
+.login-form {
+  height: 460px;
 }

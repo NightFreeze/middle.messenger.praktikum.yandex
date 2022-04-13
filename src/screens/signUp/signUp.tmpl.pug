@@ -1,31 +1,26 @@
-extends ../../layouts/centered/centeredLayout.tmpl.pug
-include ./../../components/atoms/input/input.tmpl.pug
-include ./../../components/atoms/button/button.tmpl.pug
-include ./../../components/atoms/linkButton/linkButton.tmpl.pug
-
-block content
-    include  ./../../components/atoms/tile/tile.tmpl.pug
-        block tile_content
-            form(action="" type="submit").signup__form-wrapper
-                .signup__header-wrapper
-                    h1.signup__header Регистрация
-
-                .signup__input-wrapper
-                    +renderInput("Почта", "text", "login")
-                .signup__input-wrapper
-                    +renderInput("Логин", "text", "login")
-                .signup__input-wrapper
-                    +renderInput("Имя", "text", "login")
-                .signup__input-wrapper
-                    +renderInput("Фамилия", "text", "login")
-                .signup__input-wrapper
-                    +renderInput("Телефон", "phone", "login")
-                .signup__input-wrapper
-                    +renderInput("Пароль", "password", "password")
-                .signup__input-wrapper--last
-                    +renderInput("Пароль (ещё раз)", "password", "password")
-
-                .signup__signup-button-wrapper
-                    +rednerButton("submit", "Зарегистрироваться")
-                .signup__signin-button-wrapper
-                    +linkButton("Войти")
+form.form.registration-form(action="/chats")
+    p.form__title Регистрация
+    if emailField
+        div.form__field
+            != emailField
+    if loginField
+        div.form__field
+            != loginField
+    if firstNameField
+        div.form__field
+            != firstNameField
+    if secondNameField
+        div.form__field
+            != secondNameField
+    if phoneField
+        div.form__field
+            != phoneField
+    if passwordField
+        div.form__field
+            != passwordField
+    if submitButton
+        div.form__field
+            != submitButton
+    if loginButton
+        div.form__field
+            != loginButton

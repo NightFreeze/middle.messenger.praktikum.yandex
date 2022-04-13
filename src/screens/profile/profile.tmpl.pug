@@ -1,24 +1,29 @@
-extends ../../layouts/centered/centeredLayout.tmpl.pug
-include ./../../components/atoms/avatar/avatar.tmpl.pug
-include ./../../components/atoms/profileInfo/profileInfo.tmpl.pug
-    include ./../../components/atoms/linkButton/linkButton.tmpl.pug
-
-block content
-    .profile__header-wrapper
-        .profile__heading-wrapper
-            +renderAvatar('j')
-        h1.profile__heading= name
-    .profile__info-wrapper
-        +renderProfileInfo('Почта', email)
-        +renderProfileInfo('Логин', login)
-        +renderProfileInfo('Имя', name)
-        +renderProfileInfo('Фамилия', surname)
-        +renderProfileInfo('Имя в чате', nickname)
-        +renderProfileInfo('Телефон', phone)
-    .profile__footer-wrapper
-        .profile__control-wrapper
-            +linkButton('Изменить данные')
-        .profile__control-wrapper
-            +linkButton('Изменить пароль')
-        .profile__control-wrapper
-            +linkButton('Выйти', 'l', true)
+.profile
+    a(href="/chats").left-navigation-button
+    div.main
+        form.form(action="/chats")
+            p.form__title Настройки пользователя
+            if emailField
+                div.form__field
+                    != emailField
+            if loginField
+                div.form__field
+                    != loginField
+            if firstNameField
+                div.form__field
+                    != firstNameField
+            if secondNameField
+                div.form__field
+                    != secondNameField
+            if phoneField
+                div.form__field
+                    != phoneField
+            if passwordField
+                div.form__field
+                    != passwordField
+            if submitButton
+                div.form__field
+                    != submitButton
+            if loginButton
+                div.form__field
+                    != loginButton
