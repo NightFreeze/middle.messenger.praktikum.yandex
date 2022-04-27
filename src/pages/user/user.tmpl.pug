@@ -1,0 +1,48 @@
+if leftNavigationButton
+    != leftNavigationButton
+.user-container
+    .user-wrapper
+        if user
+            .user-profile
+                .user-profile__avatar
+                    != avatar
+
+                p.user-profile__name
+                    if user.display_name
+                        != user.display_name
+                    else
+                        != user.first_name
+
+                .user-profile__list
+                    p.user-profile__item
+                        span.user-profile__item-name Почта
+                        span.user-profile__item-value!= user.email
+                    p.user-profile__item
+                        span.user-profile__item-name Логин
+                        span.user-profile__item-value!= user.login
+                    p.user-profile__item
+                        span.user-profile__item-name Имя
+                        span.user-profile__item-value!= user.first_name
+                    p.user-profile__item
+                        span.user-profile__item-name Фамилия
+                        span.user-profile__item-value!= user.second_name
+                    p.user-profile__item
+                        span.user-profile__item-name Имя в чате
+                        span.user-profile__item-value!= user.display_name
+                    p.user-profile__item
+                        span.user-profile__item-name Телефон
+                        span.user-profile__item-value!= user.phone
+
+        div(style="height: 40px")
+
+        .user-profile
+            .user-profile__list
+                if userSettingButton
+                    .user-profile__item
+                        != userSettingButton
+                if passwordChangeButton
+                    .user-profile__item
+                        != passwordChangeButton
+                if logoutButton
+                    .user-profile__item
+                        != logoutButton

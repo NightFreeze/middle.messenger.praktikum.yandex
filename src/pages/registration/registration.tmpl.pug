@@ -1,0 +1,30 @@
+form.form.registration-form(action="/chats")
+    p.form__title Регистрация
+    if emailField
+        div.form__field
+            != emailField
+    if loginField
+        div.form__field
+            != loginField
+    if firstNameField
+        div.form__field
+            != firstNameField
+    if secondNameField
+        div.form__field
+            != secondNameField
+    if phoneField
+        div.form__field
+            != phoneField
+    if passwordField
+        div.form__field
+            != passwordField
+    if submitButton
+        div.form__field
+            != submitButton
+
+            if signupReq
+                p.input-field__message
+                    != signupReq.errorMessage
+    if loginButton
+        div.form__field
+            != loginButton

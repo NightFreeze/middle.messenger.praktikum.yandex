@@ -1,0 +1,42 @@
+.profile-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: var(--neutral-background-color);
+    overflow: hidden;
+}
+
+.profile-avatar-img {
+    width: 130px;
+    height: 130px;
+}
+
+.profile-avatar-img_union {
+    width: 40px;
+    height: 40px;
+}
+
+.profile-avatar-change {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    color: var(--white);
+    padding: 10px;
+    background-color: var(--black);
+    border: none;
+    cursor: pointer;
+}
+.profile-avatar:hover .profile-avatar-change {
+    opacity: 0.5;
+}
