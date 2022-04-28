@@ -7,4 +7,4 @@ export const render = function (query: string, block: Block) {
     block.dispatchComponentDidMount();
 
     return root;
-}
+};

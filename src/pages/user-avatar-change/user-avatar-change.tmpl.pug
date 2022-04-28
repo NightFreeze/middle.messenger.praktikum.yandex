@@ -1,0 +1,17 @@
+if leftNavigationButton
+    != leftNavigationButton
+.container
+    div.main
+        form.form(id='user-avatar-change')
+            p.form__title  Загрузите файл
+            if fileField
+                div.form__field
+                    != fileField
+
+            if submitButton
+                div.form__field
+                    != submitButton
+
+                    if passwordReq
+                        p.input-field__message
+                            != passwordReq.errorMessage

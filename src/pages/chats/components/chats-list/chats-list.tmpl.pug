@@ -1,0 +1,24 @@
+.chats-list
+    if createChatButton
+        .chat-item
+            != createChatButton
+
+    if chats
+        each item in chats
+            .chat-item(data-chat-id!= item.id)
+                .chat-item_flex
+                    .chat-item__avatar
+                    .chat-item-info.chat-item__info
+                        p.chat-item-info__name= item.title
+                        p.chat-item-info__message
+                            if item.isMe
+                                span.chat-item-info__message_me Вы:
+                            if item.last_message
+                                != item.last_message.content
+                    .chat-item-data.chat-item__data
+                        p.chat-item-data__time= item.time
+                        if item.count
+                            p.chat-item-data__count: span= item.count
+
+if createChatModal
+    != createChatModal

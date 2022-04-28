@@ -1,0 +1,11 @@
+form.create-chat-form
+    if titleField
+        div.form__field
+            != titleField
+    if submitButton
+        div.form__field
+            != submitButton
+
+            if createChatReq && createChatReq.errorMessage
+                p.input-field__message
+                    != createChatReq.errorMessage

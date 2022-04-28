@@ -1,0 +1,17 @@
+form.form.login-form(action="/chats")
+    p.form__title Вход
+        if loginField
+            div.form__field
+                != loginField
+        if passwordField
+            div.form__field
+                != passwordField
+        if submitButton
+            div.form__field
+                != submitButton
+                if signinReq
+                    p.input-field__message
+                        != signinReq.errorMessage
+        if registrationButton
+            div.form__field
+                != registrationButton

@@ -1,0 +1,10 @@
+.input-field__input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #3369F3;
+  padding: 7px 0;
+
+  &:focus-visible {
+    outline: none;
+  }
+}

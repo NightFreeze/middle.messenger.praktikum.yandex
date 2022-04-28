@@ -1,0 +1,44 @@
+case view
+    when 'add'
+        form.create-chat-form
+            p.form__title Добавить пользователя
+            if loginField
+                div.form__field
+                    != loginField
+            if submitAddButton
+                div.form__field
+                    != submitAddButton
+            if backButton
+                div.form__field
+                    != backButton
+    when 'delete'
+        form.create-chat-form
+            p.form__title Удалить пользователя
+            if loginField
+                div.form__field
+                    != loginField
+            if submitDeleteButton
+                div.form__field
+                    != submitDeleteButton
+            if backButton
+                div.form__field
+                    != backButton
+    when 'users'
+        p Пользователи
+        if chatUsers
+            ul
+                each user in chatUsers
+                    li!= user.login
+        if backButton
+            div.form__field
+                != backButton
+    default
+        div
+            != deleteChatButton
+        div
+            != addUserButton
+        div
+            != removeUserButton
+        div
+            != usersButton
+
