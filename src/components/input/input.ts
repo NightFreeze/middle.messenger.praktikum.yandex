@@ -1,4 +1,4 @@
-import { Block } from '../../utils/block';
+import { Block } from '~src/utils/block';
 import inputTemplate from './input.tmpl.pug';
 
 export interface IInputProps {

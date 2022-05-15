@@ -1,5 +1,6 @@
-import { Block } from '../../utils/block';
+import { Block } from '~src/utils/block';
 import errorBlockTemplate from './error-block.tmpl.pug';
+import './error-block.scss';
 
 interface IErrorBlockProps {
     title: string;

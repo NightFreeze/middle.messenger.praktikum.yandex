@@ -3,7 +3,6 @@ import { Block } from '~src/utils/block';
 import notFoundTemplate from './not-found.tmpl.pug';
 import '../index.scss';
 import './not-found.scss';
-import '../../components/error-block/error-block.scss';
 
 export class NotFound extends Block {
     constructor() {
@@ -31,3 +30,5 @@ export class NotFound extends Block {
         return this.compile(notFoundTemplate);
     }
 }
+
+export default NotFound;

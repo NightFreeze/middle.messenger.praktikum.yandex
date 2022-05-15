@@ -5,13 +5,19 @@ import avatarTemplate from './avatar.tmpl.pug';
 import unionImage from '../../../static/images/union.svg';
 import { connect } from '~src/utils/connect';
 
+interface IAvatarProps {
+    avatar: string;
+    changeHref?: string;
+}
+
 const withAvatar = connect((state) => ({
     avatar: state.user?.avatar
         ? `${API_HOST}/resources${state.user.avatar}`
         : '',
 }));
 
-class Avatar extends Block {
+
+class Avatar extends Block<IAvatarProps> {
     router: Router;
 
     constructor(props) {

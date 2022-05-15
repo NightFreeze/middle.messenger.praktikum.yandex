@@ -1,5 +1,5 @@
-import { ErrorBlock } from '../../components/error-block/error-block';
-import { Block } from '../../utils/block';
+import { ErrorBlock } from '~src/components/error-block/error-block';
+import { Block } from '~src/utils/block';
 import notFoundTemplate from './server-error.tmpl.pug';
 import '../index.scss';
 import './server-error.scss';
