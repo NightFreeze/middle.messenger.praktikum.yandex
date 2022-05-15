@@ -5,6 +5,7 @@
 ## Проект на хостинге
 
 [Веб-приложение Чат](https://nostalgic-lewin-d794ba.netlify.app)
+[Beб-приложение Чат в Хироку](https://my-app-anitra.herokuapp.com)
 
 ## Макет
 

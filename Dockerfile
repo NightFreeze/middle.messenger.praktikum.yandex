@@ -9,7 +9,7 @@ COPY ./tsconfig.json tsconfig.json
 COPY ./webpack.config.js webpack.config.js
 COPY ./server.js server.js
 
-RUN npm install
+RUN npm install --legacy-peer-deps
 RUN npm run build
 
 EXPOSE 3000
