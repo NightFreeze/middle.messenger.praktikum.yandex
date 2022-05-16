@@ -1,5 +1,5 @@
-import { Block } from '~src/utils/block';
-import { connect } from '~src/utils/connect';
+import Block from '~src/utils/block';
+import connect from '~src/utils/connect';
 import '../index.scss';
 import './registration.scss';
 import '../../components/form/form.scss';
@@ -13,156 +13,158 @@ import { Button } from '~src/components/button/button';
 import { ValidationNames } from '~src/utils/validator';
 import { RegistrationController } from './registration.controller';
 import { PagesPath } from '~src/utils/constants';
-import { Router } from '~src/utils/router';
-import { AuthController } from '~src/controllers/auth.controller';
+import Router from '~src/utils/router';
+import AuthController from '~src/controllers/auth.controller';
 
 interface ILoginProps {
-    loginField: Input;
-    passwordField: Input;
+  loginField: Input;
+  passwordField: Input;
 }
 
 const withRegistrationApi = connect((state) => ({
-    signupReq: { ...state.signupReq },
+  signupReq: { ...state.signupReq },
 }));
 
 export class Registration extends Block<ILoginProps> {
-    registrationController;
-    authController;
-    router;
+  registrationController;
 
-    constructor() {
-        super('main');
+  authController;
 
-        this.registrationController = new RegistrationController();
-        this.authController = new AuthController();
-        this.router = new Router('');
-    }
+  router;
 
-    protected getChildren(): Record<string, Block> {
-        const emailField = new ValidatedInput({
-            isValid: false,
-            validationName: ValidationNames.EMAIL,
-            placeholder: 'Почта',
-            name: 'email',
-            type: 'email',
-            classNames: 'input-field__input',
-        });
+  constructor() {
+    super('main');
 
-        const loginField = new ValidatedInput({
-            isValid: false,
-            validationName: ValidationNames.LOGIN,
-            placeholder: 'Логин',
-            name: 'login',
-            type: 'text',
-            classNames: 'input-field__input',
-        });
+    this.registrationController = new RegistrationController();
+    this.authController = new AuthController();
+    this.router = new Router('');
+  }
 
-        const firstNameField = new ValidatedInput({
-            isValid: false,
-            validationName: ValidationNames.NAME,
-            placeholder: 'Имя',
-            name: 'first_name',
-            type: 'text',
-            classNames: 'input-field__input',
-        });
+  protected getChildren(): Record<string, Block> {
+    const emailField = new ValidatedInput({
+      isValid: false,
+      validationName: ValidationNames.EMAIL,
+      placeholder: 'Почта',
+      name: 'email',
+      type: 'email',
+      classNames: 'input-field__input',
+    });
 
-        const secondNameField = new ValidatedInput({
-            isValid: false,
-            validationName: ValidationNames.NAME,
-            placeholder: 'Фамилия',
-            name: 'second_name',
-            type: 'text',
-            classNames: 'input-field__input',
-        });
+    const loginField = new ValidatedInput({
+      isValid: false,
+      validationName: ValidationNames.LOGIN,
+      placeholder: 'Логин',
+      name: 'login',
+      type: 'text',
+      classNames: 'input-field__input',
+    });
 
-        const phoneField = new ValidatedInput({
-            isValid: false,
-            validationName: ValidationNames.PHONE,
-            placeholder: 'Телефон',
-            name: 'phone',
-            type: 'tel',
-            classNames: 'input-field__input',
-        });
+    const firstNameField = new ValidatedInput({
+      isValid: false,
+      validationName: ValidationNames.NAME,
+      placeholder: 'Имя',
+      name: 'first_name',
+      type: 'text',
+      classNames: 'input-field__input',
+    });
 
-        const passwordField = new ValidatedInput({
-            isValid: false,
-            validationName: ValidationNames.PASSWORD,
-            placeholder: 'Пароль',
-            name: 'password',
-            type: 'password',
-            classNames: 'input-field__input',
-        });
+    const secondNameField = new ValidatedInput({
+      isValid: false,
+      validationName: ValidationNames.NAME,
+      placeholder: 'Фамилия',
+      name: 'second_name',
+      type: 'text',
+      classNames: 'input-field__input',
+    });
 
-        const validatedInputList: ValidatedInput[] = [
-            emailField,
-            loginField,
-            firstNameField,
-            secondNameField,
-            phoneField,
-            passwordField,
-        ];
+    const phoneField = new ValidatedInput({
+      isValid: false,
+      validationName: ValidationNames.PHONE,
+      placeholder: 'Телефон',
+      name: 'phone',
+      type: 'tel',
+      classNames: 'input-field__input',
+    });
 
-        const submitButton = new Button({
-            text: 'Зарегистрироваться',
-            className: 'blue',
-            events: {
-                click: (event) => {
-                    event.preventDefault();
-                    validatedInputList.forEach((child) => {
-                        child.validate();
-                    });
+    const passwordField = new ValidatedInput({
+      isValid: false,
+      validationName: ValidationNames.PASSWORD,
+      placeholder: 'Пароль',
+      name: 'password',
+      type: 'password',
+      classNames: 'input-field__input',
+    });
 
-                    this.registrationController.signup({
-                        email: emailField.value,
-                        login: loginField.value,
-                        first_name: firstNameField.value,
-                        second_name: secondNameField.value,
-                        phone: phoneField.value,
-                        password: passwordField.value,
-                    });
-                },
-            },
-        });
+    const validatedInputList: ValidatedInput[] = [
+      emailField,
+      loginField,
+      firstNameField,
+      secondNameField,
+      phoneField,
+      passwordField,
+    ];
 
-        const loginButton = new Button({
-            text: 'Войти',
-            className: 'white',
-            events: {
-                click: (event) => {
-                    event.preventDefault();
+    const submitButton = new Button({
+      text: 'Зарегистрироваться',
+      className: 'blue',
+      events: {
+        click: (event) => {
+          event.preventDefault();
+          validatedInputList.forEach((child) => {
+            child.validate();
+          });
 
-                    this.router.go(PagesPath.LOGIN);
-                },
-            },
-        });
+          this.registrationController.signup({
+            email: emailField.value,
+            login: loginField.value,
+            first_name: firstNameField.value,
+            second_name: secondNameField.value,
+            phone: phoneField.value,
+            password: passwordField.value,
+          });
+        },
+      },
+    });
 
-        return {
-            emailField,
-            loginField,
-            firstNameField,
-            secondNameField,
-            phoneField,
-            passwordField,
-            submitButton,
-            loginButton,
-        };
-    }
+    const loginButton = new Button({
+      text: 'Войти',
+      className: 'white',
+      events: {
+        click: (event) => {
+          event.preventDefault();
 
-    protected getAttributes(): Record<string, string> {
-        return {
-            class: 'main',
-        };
-    }
+          this.router.go(PagesPath.LOGIN);
+        },
+      },
+    });
 
-    public async componentDidMount() {
-        const isAuth = await this.authController.checkAuth();
+    return {
+      emailField,
+      loginField,
+      firstNameField,
+      secondNameField,
+      phoneField,
+      passwordField,
+      submitButton,
+      loginButton,
+    };
+  }
 
-        if (isAuth) this.router.go(PagesPath.CHATS)
-    }
+  protected getAttributes(): Record<string, string> {
+    return {
+      class: 'main',
+    };
+  }
 
-    public render(): DocumentFragment {
-        return this.compile(registrationTemplate, this.props);
-    }
+  public async componentDidMount() {
+    const isAuth = await this.authController.checkAuth();
+
+    if (isAuth) this.router.go(PagesPath.CHATS);
+  }
+
+  public render(): DocumentFragment {
+    return this.compile(registrationTemplate, this.props);
+  }
 }
 
 export default withRegistrationApi(Registration);

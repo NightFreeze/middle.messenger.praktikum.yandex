@@ -1,9 +1,9 @@
-import { Block } from '~src/utils/block';
+import Block from '~src/utils/block';
 import { Button } from '~src/components/button/button';
 import { Modal } from '~src/components/modal/modal';
-import { Router } from '~src/utils/router';
+import Router from '~src/utils/router';
 import { queryString } from '~src/utils/query-string';
-import { connect } from '~src/utils/connect';
+import connect from '~src/utils/connect';
 import { PagesPath } from '~src/utils/constants';
 import chatsListTemplate from './chats-list.tmpl.pug';
 import { ChatsListController } from './chats-list.controller';
@@ -13,64 +13,65 @@ import './chats-list.scss';
 const withChats = connect((state) => ({ chats: state.chats }));
 
 export class ChatsList extends Block {
-    router;
-    chatsController;
+  router;
 
-    constructor() {
-        super('div');
+  chatsController;
 
-        this.router = new Router('');
-        this.chatsController = new ChatsListController();
-    }
+  constructor() {
+    super('div');
 
-    protected getChildren(): Record<string, Block> {
-        const createChatModal = new Modal({
-            contentBlock: new CreateChatForm(),
-        });
+    this.router = new Router('');
+    this.chatsController = new ChatsListController();
+  }
 
-        const createChatButton = new Button({
-            text: 'Создать чат',
-            className: 'blue create-chat-button',
-            events: {
-                click: (event) => {
-                    event.preventDefault();
+  protected getChildren(): Record<string, Block> {
+    const createChatModal = new Modal({
+      contentBlock: new CreateChatForm(),
+    });
 
-                    createChatModal.show();
-                },
-            },
-        });
+    const createChatButton = new Button({
+      text: 'Создать чат',
+      className: 'blue create-chat-button',
+      events: {
+        click: (event) => {
+          event.preventDefault();
 
-        return {
-            createChatButton,
-            createChatModal,
-        };
-    }
+          createChatModal.show();
+        },
+      },
+    });
 
-    protected getEvents(): Record<string, (e: Event) => void> {
-        return {
-            click: (event) => {
-                const chatItem = event.target.closest('[data-chat-id]');
-                if (chatItem) {
-                    this.router.go(
-                        `${PagesPath.CHATS}?${queryString({
-                            chat_id: chatItem.dataset.chatId,
-                        })}`
-                    );
-                }
-            },
-        };
-    }
+    return {
+      createChatButton,
+      createChatModal,
+    };
+  }
 
-    componentDidMount() {
-        this.chatsController.getChats();
-        this.children.createChatModal.hide();
-    }
+  protected getEvents(): Record<string, (e: Event) => void> {
+    return {
+      click: (event) => {
+        const chatItem = event.target.closest('[data-chat-id]');
+        if (chatItem) {
+          this.router.go(
+            `${PagesPath.CHATS}?${queryString({
+              chat_id: chatItem.dataset.chatId,
+            })}`
+          );
+        }
+      },
+    };
+  }
 
-    public render(): DocumentFragment {
-        const { chats } = this.props;
+  componentDidMount() {
+    this.chatsController.getChats();
+    this.children.createChatModal.hide();
+  }
 
-        return this.compile(chatsListTemplate, { chats });
-    }
+  public render(): DocumentFragment {
+    const { chats } = this.props;
+
+    return this.compile(chatsListTemplate, { chats });
+  }
 }
 
 export default withChats(ChatsList);

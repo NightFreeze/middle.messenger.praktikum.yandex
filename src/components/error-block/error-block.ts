@@ -1,31 +1,31 @@
-import { Block } from '~src/utils/block';
+import Block from '~src/utils/block';
 import errorBlockTemplate from './error-block.tmpl.pug';
 import './error-block.scss';
 
 interface IErrorBlockProps {
-    title: string;
-    subtitle: string;
-    linkHref: string;
-    linkText: string;
+  title: string;
+  subtitle: string;
+  linkHref: string;
+  linkText: string;
 }
 
 export class ErrorBlock extends Block<IErrorBlockProps> {
-    constructor(props: IErrorBlockProps) {
-        super('div', props);
-    }
+  constructor(props: IErrorBlockProps) {
+    super('div', props);
+  }
 
-    protected getAttributes() {
-        return {
-            class: 'error-block',
-        };
-    }
+  protected getAttributes() {
+    return {
+      class: 'error-block',
+    };
+  }
 
-    public render() {
-        return this.compile(errorBlockTemplate, {
-            title: this.props.title,
-            subtitle: this.props.subtitle,
-            linkHref: this.props.linkHref,
-            linkText: this.props.linkText,
-        });
-    }
+  public render() {
+    return this.compile(errorBlockTemplate, {
+      title: this.props.title,
+      subtitle: this.props.subtitle,
+      linkHref: this.props.linkHref,
+      linkText: this.props.linkText,
+    });
+  }
 }

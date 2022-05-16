@@ -1,23 +1,27 @@
 type Indexed<T = unknown> = {
-    [key in string]: T;
+  [key in string]: T;
 };
 
+// eslint-disable-next-line import/prefer-default-export
 export const merge = (lhs: Indexed, rhs: Indexed): Indexed => {
-    for (const p in rhs) {
-        if (!rhs.hasOwnProperty(p)) {
-            continue;
-        }
-
-        try {
-            if (rhs[p].constructor === Object) {
-                rhs[p] = merge(lhs[p] as Indexed, rhs[p] as Indexed);
-            } else {
-                lhs[p] = rhs[p];
-            }
-        } catch (e) {
-            lhs[p] = rhs[p];
-        }
+  // eslint-disable-next-line no-restricted-syntax
+  for (const p in rhs) {
+    // eslint-disable-next-line no-prototype-builtins
+    if (!rhs.hasOwnProperty(p)) {
+      // eslint-disable-next-line no-continue
+      continue;
     }
 
-    return lhs;
+    try {
+      if (rhs[p].constructor === Object) {
+        rhs[p] = merge(lhs[p] as Indexed, rhs[p] as Indexed);
+      } else {
+        lhs[p] = rhs[p];
+      }
+    } catch (e) {
+      lhs[p] = rhs[p];
+    }
+  }
+
+  return lhs;
 };

@@ -1,4 +1,4 @@
-export const getQuery = (query) => {
-    const search = new URLSearchParams(document.location.search);
-    return search.get(query);
+export default (query) => {
+  const search = new URLSearchParams(document.location.search);
+  return search.get(query);
 };

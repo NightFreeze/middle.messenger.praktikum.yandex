@@ -1,26 +1,26 @@
-import { EventBus } from './event-bus';
+import EventBus from './event-bus';
 import { set } from './set';
 
 export enum StoreEvents {
-    Updated = 'updated',
+  UPDATED = 'updated',
 }
 
 type Indexed<T = any> = {
-    [key in string]: T;
+  [key in string]: T;
 };
 
 class Store extends EventBus {
-    private state: Indexed = {};
+  private state: Indexed = {};
 
-    public getState() {
-        return this.state;
-    }
+  public getState() {
+    return this.state;
+  }
 
-    public set(path: string, value: unknown) {
-        set(this.state, path, value);
+  public set(path: string, value: unknown) {
+    set(this.state, path, value);
 
-        this.emit(StoreEvents.Updated);
-    }
+    this.emit(StoreEvents.UPDATED);
+  }
 }
 
 export default new Store();
