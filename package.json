@@ -79,5 +79,10 @@
   "keywords": [],
   "dependencies": {
     "express": "4.17.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run stylelint && npm run eslint && npm run eslint:fix && npm run test"
+    }
   }
 }
