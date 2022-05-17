@@ -1,6 +1,6 @@
-import { Block } from '~src/utils/block';
-import { Router } from '~src/utils/router';
-import { connect } from '~src/utils/connect';
+import Block from '~src/utils/block';
+import Router from '~src/utils/router';
+import connect from '~src/utils/connect';
 import { Button } from '~src/components/button/button';
 import LeftNavigationButton from '~src/components/left-navigation-button/left-navigation-button';
 import Avatar from '~src/components/avatar/avatar';
@@ -15,82 +15,84 @@ import '~src/components/avatar/avatar.scss';
 const withUser = connect((state) => ({ user: state.user }));
 
 class User extends Block {
-    userController;
+  userController;
 
-    router;
+  router;
 
-    constructor() {
-        super('main');
+  constructor() {
+    super('main');
 
-        this.userController = new UserController();
-        this.router = new Router('');
-    }
+    this.userController = new UserController();
+    this.router = new Router('');
+  }
 
-    protected getChildren(): Record<string, Block> {
-        const leftNavigationButton = new LeftNavigationButton({ path: PagesPath.CHATS });
+  protected getChildren(): Record<string, Block> {
+    const leftNavigationButton = new LeftNavigationButton({
+      path: PagesPath.CHATS,
+    });
 
-        const avatar = new Avatar({
-            changeHref: PagesPath.USER_AVATAR,
-        });
+    const avatar = new Avatar({
+      changeHref: PagesPath.USER_AVATAR,
+    });
 
-        const userSettingButton = new Button({
-            text: 'Изменить данные',
-            className: 'white',
-            events: {
-                click: (event) => {
-                    event.preventDefault();
-                    this.router.go(PagesPath.USER_SETTINGS);
-                },
-            },
-        });
+    const userSettingButton = new Button({
+      text: 'Изменить данные',
+      className: 'white',
+      events: {
+        click: (event) => {
+          event.preventDefault();
+          this.router.go(PagesPath.USER_SETTINGS);
+        },
+      },
+    });
 
-        const passwordChangeButton = new Button({
-            text: 'Изменить пароль',
-            className: 'white',
-            events: {
-                click: (event) => {
-                    event.preventDefault();
-                    this.router.go(PagesPath.USER_PASSWORD);
-                },
-            },
-        });
+    const passwordChangeButton = new Button({
+      text: 'Изменить пароль',
+      className: 'white',
+      events: {
+        click: (event) => {
+          event.preventDefault();
+          this.router.go(PagesPath.USER_PASSWORD);
+        },
+      },
+    });
 
-        const logoutButton = new Button({
-            text: 'Выйти',
-            className: 'white',
-            events: {
-                click: (event) => {
-                    event.preventDefault();
+    const logoutButton = new Button({
+      text: 'Выйти',
+      className: 'white',
+      events: {
+        click: (event) => {
+          event.preventDefault();
 
-                    this.userController.logout();
-                },
-            },
-        });
+          this.userController.logout();
+        },
+      },
+    });
 
-        return {
-            avatar,
-            leftNavigationButton,
-            userSettingButton,
-            passwordChangeButton,
-            logoutButton,
-        };
-    }
+    return {
+      avatar,
+      leftNavigationButton,
+      userSettingButton,
+      passwordChangeButton,
+      logoutButton,
+    };
+  }
 
-    componentDidMount() {
-        this.userController.getUser();
-    }
+  componentDidMount() {
+    this.userController.getUser();
+  }
 
-    protected getAttributes(): Record<string, string> {
-        return {
-            class: 'main main-user',
-        };
-    }
+  protected getAttributes(): Record<string, string> {
+    return {
+      class: 'main main-user',
+    };
+  }
 
-    public render(): DocumentFragment {
-        const { user } = this.props;
+  public render(): DocumentFragment {
+    const { user } = this.props;
 
-        return this.compile(userTemplate, { user });
-    }
+    return this.compile(userTemplate, { user });
+  }
 }
 
 export default withUser(User);
